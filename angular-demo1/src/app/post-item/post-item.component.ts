@@ -12,11 +12,16 @@ export class PostItemComponent implements OnInit {
 
   constructor(private postItemService: PostItemService) { }
   
+  //all of the values entered by the user are passed into the saveItem function
   saveItem(newName: string, newPrice: number, newTax: number, newQuantity: number){
     
-    this.postItemService.postItem(newName, newPrice, newTax, newQuantity);
-    
-    alert ("Added "+ newName + " successfully to the database!");
+    if ( newName != "" && newPrice != "" && newQuantity !=""){
+      //calls postItem from the post-item service
+      this.postItemService.postItem(newName, newPrice, newTax, newQuantity);
+      alert ("Added "+ newName + " successfully to the database!");
+    }else{
+      alert ("Please enter values for Name, Price, and Quantity.");
+    }
   }
   
   ngOnInit() {
