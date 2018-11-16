@@ -1,0 +1,9 @@
+<br>
+<h3> Get the quantity, price, and tax rate of an item: </h3>
+Name: <br> <input #getItemInfo type="text"/> <br>
+<br><button (click)="getItem(getItemInfo.value)">Get Item</button>
+<br>
+
+<div *ngIf = "isSuccessful">
+    <span>Name: {{Name}}, Price: ${{Price}}, Tax: {{Tax}}%, Quantity: {{Quantity}}</span>
+</div>

@@ -1,0 +1,9 @@
+<br>
+<h3>Create a new item with price, quantity, and tax: </h3>
+
+Name: <br> <input #newName type="text"/> <br>
+Price: <br> <input #newPrice type="text"/> <br>
+Tax: <br> <input #newTax type="number"/> <br>
+Quantity: <br> <input #newQuantity type="number"/><br>
+<br><button (click)="saveItem(newName.value, newPrice.value, newTax.value, newQuantity.value)">Save Item</button>
+<br>
